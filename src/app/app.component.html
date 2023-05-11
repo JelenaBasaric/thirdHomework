@@ -2,10 +2,17 @@
   <div class="col-md-12">
     <button class="btn btn-primary" (click)="onDisplayButtonClick()">Display details</button>
     <p *ngIf=showPassword>Secret password=sweet</p>
-    <div
+ <div
     *ngFor="let logItem of logs"
+    [ngStyle]="{backgroundColor:logItem>=5?'blue':'transparent'}"
+    [ngClass]="{'whiteText':logItem>=5}"
     >{{logItem}}</div>
-  </div>
-</div>
+  </div> 
+ <!--  <div
+    *ngFor="let logItem of logs;let i=index"
+    [ngClass]="{'whiteText':i>=5}"
+    >{{logItem}}</div>
+  </div> -->
+
 
 

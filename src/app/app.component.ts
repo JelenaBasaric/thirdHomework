@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'thirdHomework';
+  logs :number[]=[];
   showPassword=false;
   onDisplayButtonClick(){
     this.showPassword=!this.showPassword;
+    this.logs.push(this.logs.length+1);
   }
 }

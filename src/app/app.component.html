@@ -1,7 +1,10 @@
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary">Display details</button>
-    <p ngIf="showPassword">Secret password=sweet</p>
+    <button class="btn btn-primary" (click)="onDisplayButtonClick()">Display details</button>
+    <p *ngIf=showPassword>Secret password=sweet</p>
+    <div
+    *ngFor="let logItem of logs"
+    >{{logItem}}</div>
   </div>
 </div>
 
